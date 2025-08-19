@@ -1,0 +1,25 @@
+# ----------------------------
+# Q4: Get all collections with items' names only
+# ----------------------------
+query q4 {
+  collections {
+    title
+    items {
+      name
+    }
+  }
+}
+
+# Sample Output:
+# {
+#   "collections": [
+#     { "title": "Hats", "items": [{ "name": "Baseball Cap" }, { "name": "Beanie" }] },
+#     { "title": "Jackets", "items": [{ "name": "Leather Jacket" }, { "name": "Denim Jacket" }] },
+#     { "title": "Sneakers", "items": [{ "name": "Running Shoes" }, { "name": "High Tops" }] }
+#   ]
+# }
+
+# Comments:
+# This query fetches all collections but only the names of items inside each collection.
+# It’s useful when you want to display a list quickly without fetching all details.
+# Less data is returned, so the query is faster.

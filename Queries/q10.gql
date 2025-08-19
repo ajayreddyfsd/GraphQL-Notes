@@ -1,0 +1,26 @@
+# ----------------------------
+# Q10: Get all collections with items sorted by descending price
+# ----------------------------
+query q10 {
+  collections {
+    title
+    items {
+      name
+      price
+    }
+  }
+}
+
+# Sample Output (sorted manually in resolver):
+# {
+#   "collections": [
+#     { "title": "Hats", "items": [{ "name": "Baseball Cap", "price": 20.0 }, { "name": "Beanie", "price": 15.0 }] },
+#     { "title": "Jackets", "items": [{ "name": "Leather Jacket", "price": 120.0 }, { "name": "Denim Jacket", "price": 80.0 }] },
+#     { "title": "Sneakers", "items": [{ "name": "High Tops", "price": 75.0 }, { "name": "Running Shoes", "price": 60.0 }] }
+#   ]
+# }
+
+# Comments:
+# GraphQL schema supports nested objects; sorting can be handled via arguments or resolver logic.
+# This example demonstrates how items can be ordered inside each collection.
+# Useful for showing “most expensive first” products in a UI.

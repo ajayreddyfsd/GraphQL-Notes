@@ -1,0 +1,25 @@
+# ----------------------------
+# Q6: Get items with price greater than 50
+# ----------------------------
+query q6 {
+  collections {
+    title
+    items {
+      name
+      price
+    }
+  }
+}
+
+# Sample Output (filtered on client-side or with resolver logic):
+# {
+#   "collections": [
+#     { "title": "Jackets", "items": [{ "name": "Leather Jacket", "price": 120.0 }, { "name": "Denim Jacket", "price": 80.0 }] },
+#     { "title": "Sneakers", "items": [{ "name": "Running Shoes", "price": 60.0 }, { "name": "High Tops", "price": 75.0 }] }
+#   ]
+# }
+
+# Comments:
+# GraphQL itself doesn’t filter automatically unless you define arguments in your schema.
+# Here we imagine the resolver filters items with price > 50.
+# Shows intermediate level querying and filtering logic.

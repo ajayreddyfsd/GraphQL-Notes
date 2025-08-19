@@ -1,0 +1,27 @@
+# ----------------------------
+# Q8: Get items with price >= 70
+# ----------------------------
+query q8 {
+  itemsAbovePrice(minPrice: 70) {
+    id
+    name
+    price
+    collection {
+      title
+    }
+  }
+}
+
+# Sample Output:
+# {
+#   "itemsAbovePrice": [
+#     { "id": "201", "name": "Leather Jacket", "price": 120.0, "collection": { "title": "Jackets" } },
+#     { "id": "202", "name": "Denim Jacket", "price": 80.0, "collection": { "title": "Jackets" } },
+#     { "id": "302", "name": "High Tops", "price": 75.0, "collection": { "title": "Sneakers" } }
+#   ]
+# }
+
+# Comments:
+# Demonstrates filtering items by price directly in GraphQL.
+# Only returns items whose price >= 70.
+# Shows how GraphQL can enforce filtering without backend SQL/Mongo logic.

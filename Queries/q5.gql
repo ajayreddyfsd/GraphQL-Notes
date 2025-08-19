@@ -1,0 +1,43 @@
+# ----------------------------
+# Q5: Get all items along with their collection title
+# ----------------------------
+query q5 {
+  collections {
+    items {
+      name
+      price
+      collection {
+        title
+      }
+    }
+  }
+}
+
+# Sample Output:
+# {
+#   "collections": [
+#     {
+#       "items": [
+#         { "name": "Baseball Cap", "price": 20.0, "collection": { "title": "Hats" } },
+#         { "name": "Beanie", "price": 15.0, "collection": { "title": "Hats" } }
+#       ]
+#     },
+#     {
+#       "items": [
+#         { "name": "Leather Jacket", "price": 120.0, "collection": { "title": "Jackets" } },
+#         { "name": "Denim Jacket", "price": 80.0, "collection": { "title": "Jackets" } }
+#       ]
+#     },
+#     {
+#       "items": [
+#         { "name": "Running Shoes", "price": 60.0, "collection": { "title": "Sneakers" } },
+#         { "name": "High Tops", "price": 75.0, "collection": { "title": "Sneakers" } }
+#       ]
+#     }
+#   ]
+# }
+
+# Comments:
+# This query fetches each item along with its parent collection title.
+# Demonstrates nested querying in GraphQL.
+# Useful if you want item details and also know which collection they belong to.

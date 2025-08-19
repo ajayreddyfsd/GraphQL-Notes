@@ -1,0 +1,34 @@
+# ----------------------------
+# Q7: Get a specific item by ID
+# ----------------------------
+query q7 {
+  item(id: "201") {
+    id
+    name
+    price
+    imageUrl
+    collection {
+      id
+      title
+    }
+  }
+}
+
+# Sample Output:
+# {
+#   "item": {
+#     "id": "201",
+#     "name": "Leather Jacket",
+#     "price": 120.0,
+#     "imageUrl": "https://example.com/leather.png",
+#     "collection": {
+#       "id": "2",
+#       "title": "Jackets"
+#     }
+#   }
+# }
+
+# Comments:
+# Fetches a single item by ID.
+# Includes full item info plus its parent collection.
+# Useful when user clicks an item for a detailed view.

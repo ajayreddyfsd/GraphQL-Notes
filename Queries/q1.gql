@@ -1,0 +1,22 @@
+#! gets all the collections from the data but shows only id and title in each collection
+#! how do i know if it gets all collections or specific collections?
+#! we first specified this in the schema right? check schema file
+#?   collections means it gives all colls
+#?   collection(id: __ ): gives collection with specific collection_id
+#?   getCollectionsByTitle(title: __ ): gives collection with specific collection_title
+
+query q1 {
+  collections {
+    id
+    title
+  }
+}
+
+# Output:
+# {
+#   "collections": [
+#     { "id": "1", "title": "Hats" },
+#     { "id": "2", "title": "Jackets" },
+#     { "id": "3", "title": "Sneakers" }
+#   ]
+# }

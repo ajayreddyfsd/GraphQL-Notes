@@ -1,0 +1,81 @@
+# ============================
+# GraphQL Schema: Comprehensive
+# ============================
+
+# ----------------------------
+# The Query type defines all the ways the front-end can request data.
+# This is the "menu" of queries the client can ask for.
+# ----------------------------
+type Query {
+  # Get all collections
+  collections: [Collection!]!
+  # Example: q1, q4, q5, q6
+
+  # Get one collection by its ID
+  collection(id: ID!): Collection
+  # Example: q2
+
+  # Get one collection by title
+  getCollectionsByTitle(title: String!): Collection
+  # Example: q3
+
+  # Get a single item by ID along with its collection info
+  item(id: ID!): Item
+  # Example: q7
+
+  # Advanced: get items filtered by price
+  itemsAbovePrice(minPrice: Float!): [Item!]!
+  # Example: q6 (assuming filtering handled in GraphQL)
+}
+
+# ----------------------------
+# Collection type: represents a group of items
+# ----------------------------
+type Collection {
+  # Unique identifier of the collection
+  id: ID!
+
+  # Title/name of the collection (e.g., "Hats")
+  title: String!
+
+  # List of items in this collection
+  # Non-null list, each item is non-null
+  items(minPrice: Float, maxPrice: Float): [Item!]!
+  # Arguments:
+  # - minPrice (optional): only return items with price >= minPrice
+  # - maxPrice (optional): only return items with price <= maxPrice
+  # Examples: q4, q5, q6
+}
+
+# ----------------------------
+# Item type: represents a product inside a collection
+# ----------------------------
+type Item {
+  # Unique identifier of the item
+  id: ID!
+
+  # Name of the item (e.g., "Baseball Cap")
+  name: String!
+
+  # Price of the item (floating point number)
+  price: Float!
+
+  # URL of the item's image
+  imageUrl: String!
+
+  # Reference to the parent collection
+  collection: Collection
+}
+
+# ============================
+# Example Queries Mapping
+# ============================
+
+# q1: Get all collections (basic)
+# q2: Get one collection by ID
+# q3: Get collection by title
+# q4: Get all collections with only items' names
+# q5: Get all items with their parent collection info
+# q6: Get items above a certain price (filtering)
+# q7: Get a specific item by ID along with its collection info
+# ============================

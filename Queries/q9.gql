@@ -1,0 +1,26 @@
+# ----------------------------
+# Q9: Get collections with items priced >= 60
+# ----------------------------
+query q9 {
+  collections {
+    title
+    items(minPrice: 60) {
+      name
+      price
+    }
+  }
+}
+
+# Sample Output:
+# {
+#   "collections": [
+#     { "title": "Jackets", "items": [{ "name": "Leather Jacket", "price": 120.0 }, { "name": "Denim Jacket", "price": 80.0 }] },
+#     { "title": "Sneakers", "items": [{ "name": "Running Shoes", "price": 60.0 }, { "name": "High Tops", "price": 75.0 }] },
+#     { "title": "Hats", "items": [] }
+#   ]
+# }
+
+# Comments:
+# Uses the minPrice argument in Collection type.
+# Only items meeting the minPrice requirement are returned per collection.
+# Hats collection returns empty because all items are below 60.

@@ -1,0 +1,31 @@
+# ----------------------------
+# Q2: Get one collection by ID
+# ----------------------------
+query q2 {
+  collection(id: "2") {
+    id
+    title
+    items {
+      id
+      name
+      price
+    }
+  }
+}
+
+# Sample Output:
+# {
+#   "collection": {
+#     "id": "2",
+#     "title": "Jackets",
+#     "items": [
+#       { "id": "201", "name": "Leather Jacket", "price": 120.0 },
+#       { "id": "202", "name": "Denim Jacket", "price": 80.0 }
+#     ]
+#   }
+# }
+
+# Comments:
+# This query fetches only one collection by its ID (here "2").
+# It also fetches all the items inside that collection with basic info #! that is only the info thats asked for
+# Useful when you want detailed info for a single category.

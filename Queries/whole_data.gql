@@ -1,0 +1,31 @@
+{
+  "collections": [
+    {
+      "id": "1",
+      "title": "Hats",
+      "items": [
+        { "id": "101", "name": "Baseball Cap", "price": 20.0, "imageUrl": "https://example.com/cap.png", "collectionId": "1" },
+        { "id": "102", "name": "Beanie", "price": 15.0, "imageUrl": "https://example.com/beanie.png", "collectionId": "1" }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Jackets",
+      "items": [
+        { "id": "201", "name": "Leather Jacket", "price": 120.0, "imageUrl": "https://example.com/leather.png", "collectionId": "2" },
+        { "id": "202", "name": "Denim Jacket", "price": 80.0, "imageUrl": "https://example.com/denim.png", "collectionId": "2" }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Sneakers",
+      "items": [
+        { "id": "301", "name": "Running Shoes", "price": 60.0, "imageUrl": "https://example.com/running.png", "collectionId": "3" },
+        { "id": "302", "name": "High Tops", "price": 75.0, "imageUrl": "https://example.com/hightop.png", "collectionId": "3" }
+      ]
+    }
+  ]
+}
+
+#! we have 3 collections above, each with ids 1, 2, 3
+#! and each collection has a list of docs in the item-KV pair

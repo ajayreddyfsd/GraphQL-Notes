@@ -1,0 +1,32 @@
+# ----------------------------
+# Q3: Get collection by title
+# ----------------------------
+query q3 {
+  getCollectionsByTitle(title: "Sneakers") {
+    id
+    title
+    items {
+      id
+      name
+      price
+      imageUrl
+    }
+  }
+}
+
+# Sample Output:
+# {
+#   "getCollectionsByTitle": {
+#     "id": "3",
+#     "title": "Sneakers",
+#     "items": [
+#       { "id": "301", "name": "Running Shoes", "price": 60.0, "imageUrl": "https://example.com/running.png" },
+#       { "id": "302", "name": "High Tops", "price": 75.0, "imageUrl": "https://example.com/hightop.png" }
+#     ]
+#   }
+# }
+
+# Comments:
+# This query filters a collection by its title instead of ID.
+# It returns the collection and all its items with detailed info, including imageUrl. #! only the info asked for
+# Useful when the front-end only knows the collection name, not its ID.
