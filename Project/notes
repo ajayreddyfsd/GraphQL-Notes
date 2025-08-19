@@ -1,0 +1,22 @@
+https://github.com/ZhangMYihua/crwn-clothing-v2-graphql/tree/lesson-2
+
+in index.js, first import specifc things
+
+and then wrap apploo provider around app comp
+
+now earlier, we were context to get the data right, now we will be using gql and context both
+
+categores.context
+we use useQuery
+
+//! Run the GraphQL query using useQuery()
+//! Run the GraphQL query using useQuery()
+//? but where is GraphQL getting the data from? from the backend, backend has the data, which we have not coded yet
+//? instructor already has backend coded, so we are using it.
+//? so once backedn is coded, we can query and useQuery() like this.
+
+usage is same has normla context usage
+importing useContext and the specific context
+
+can also get data directly through gql inside comp instead of context
+can also modify or mutate data directlt from inside comp instead of context

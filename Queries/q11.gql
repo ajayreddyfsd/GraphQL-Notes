@@ -1,0 +1,36 @@
+# ----------------------------
+# Q11: Get collection by ID using variable
+# ----------------------------
+query q11($collectionId: ID!) {
+  collection(id: $collectionId) {
+    id
+    title
+    items {
+      id
+      name
+      price
+    }
+  }
+}
+
+# Variables:
+# {
+#   "collectionId": "3"
+# }
+
+# Sample Output:
+# {
+#   "collection": {
+#     "id": "3",
+#     "title": "Sneakers",
+#     "items": [
+#       { "id": "301", "name": "Running Shoes", "price": 60.0 },
+#       { "id": "302", "name": "High Tops", "price": 75.0 }
+#     ]
+#   }
+# }
+
+# Comments:
+# - $collectionId is a variable you pass separately, not hardcoded.
+# - Makes queries reusable with different IDs.
+# - Useful for frontend apps where the ID is dynamic (e.g., from URL params).
