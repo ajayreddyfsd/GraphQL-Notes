@@ -1,0 +1,25 @@
+# this is like the menu for front end to choose from
+# It defines what questions you can ask the server and u can only ask from this menu and not any
+type Query {
+  collections: [Collection!]!
+  collection(id: ID!): Collection
+  getCollectionsByTitle(title: String): Collection
+}
+
+# this defines the shape of the collection object
+type Collection {
+  id: ID!
+  title: String!
+  items: [Item!]!
+}
+
+# this defines the shape of item object in the items-KV-pair of Collection object
+type Item {
+  id: ID!
+  name: String!
+  price: Float!
+  imageUrl: String!
+  collection: Collection
+}
+
+#! ! at the end means that field is mandatory

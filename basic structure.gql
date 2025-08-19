@@ -1,0 +1,48 @@
+in Mdb, we have db, collections and docs
+collections just have name
+and inside collections there are docs which are just json object
+
+
+
+
+but in Gql, there is no DB is first place
+also, 
+collections and docs are in a single json with collection-id and collection-title
+so, collections itself is a json doc with id, title and also the json docs
+
+
+
+
+examples :
+----------
+
+{
+  "id": "1",
+  "title": "Hats",
+  "items": [
+    { "id": "101", "name": "Baseball Cap", "price": 20.0, "imageUrl": "https://example.com/cap.png" },
+    { "id": "102", "name": "Beanie", "price": 15.0, "imageUrl": "https://example.com/beanie.png" }
+  ]
+}
+
+
+{
+  "id": "2",
+  "title": "Jackets",
+  "items": [
+    { "id": "201", "name": "Leather Jacket", "price": 120.0, "imageUrl": "https://example.com/leather.png" },
+    { "id": "202", "name": "Denim Jacket", "price": 80.0, "imageUrl": "https://example.com/denim.png" }
+  ]
+}
+
+
+{
+  "id": "3",
+  "title": "Sneakers",
+  "items": [
+    { "id": "301", "name": "Running Shoes", "price": 60.0, "imageUrl": "https://example.com/running.png" },
+    { "id": "302", "name": "High Tops", "price": 75.0, "imageUrl": "https://example.com/hightop.png" }
+  ]
+}
+
+
