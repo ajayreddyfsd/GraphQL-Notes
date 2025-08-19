@@ -1,22 +1,31 @@
-https://github.com/ZhangMYihua/crwn-clothing-v2-graphql/tree/lesson-2
+# CRWN Clothing v2 - GraphQL Notes
+# link : https://github.com/ZhangMYihua/crwn-clothing-v2-graphql/tree/lesson-2
 
-in index.js, first import specifc things
+## Index.js
 
-and then wrap apploo provider around app comp
+1. **Import specific things first**.
+2. **Wrap `ApolloProvider` around the App component**.
 
-now earlier, we were context to get the data right, now we will be using gql and context both
+---
 
-categores.context
-we use useQuery
+## Context vs GraphQL
 
+- Earlier, we were using **React Context** to get the data.
+- Now, we will be using **both GraphQL and Context**.
+
+---
+
+## `categories.context.js`
+
+- We use `useQuery` to run GraphQL queries.
+
+```javascript
 //! Run the GraphQL query using useQuery()
-//! Run the GraphQL query using useQuery()
-//? but where is GraphQL getting the data from? from the backend, backend has the data, which we have not coded yet
-//? instructor already has backend coded, so we are using it.
-//? so once backedn is coded, we can query and useQuery() like this.
+//? Where is GraphQL getting the data from?
+//? It gets it from the backend. The backend already has the data, which we have not coded ourselves.
+//? The instructor already coded the backend, so we are just using it.
+//? Once the backend is ready, we can query and use `useQuery()` like this.
 
-usage is same has normla context usage
-importing useContext and the specific context
 
-can also get data directly through gql inside comp instead of context
-can also modify or mutate data directlt from inside comp instead of context
+we can also get-data or mutate-data directly from inside the component
+```
