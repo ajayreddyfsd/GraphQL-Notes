@@ -1,5 +1,7 @@
 # CRWN Clothing v2 - GraphQL Notes
-# link : https://github.com/ZhangMYihua/crwn-clothing-v2-graphql/tree/lesson-2
+# GH link : https://github.com/ZhangMYihua/crwn-clothing-v2-graphql/tree/lesson-2
+# working backend link: https://crwn-clothing.com/
+# this is the backend that graphQL is getting the data from
 
 ## Index.js
 
