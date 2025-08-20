@@ -33,7 +33,7 @@ export const CategoriesProvider = ({ children }) => {
   //! Run the GraphQL query using useQuery()
   //? but where is GraphQL getting the data from? from the backend, backend has the data, which we have not coded yet
   //? instructor already has backend coded, so we are using it.
-  //? so once backedn is coded, we can query and useQuery() like this.
+  //? so once backend is coded, we can query and useQuery() like this and get the data
   const { loading, error, data } = useQuery(COLLECTIONS);
 
   // 4️⃣ When data is fetched, transform it into a map

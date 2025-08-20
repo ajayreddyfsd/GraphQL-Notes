@@ -1,6 +1,6 @@
 in Mdb, we have db, collections and docs
 collections just have name
-and inside collections there are docs which are just json object
+and inside collections there are docs which are just json objects
 
 
 
@@ -8,12 +8,12 @@ and inside collections there are docs which are just json object
 but in Gql, there is no DB is first place
 also, 
 collections and docs are in a single json with collection-id and collection-title
-so, collections itself is a json doc with id, title and also the json docs
+so, collections itself is a json doc with id, title and also those docs - json objs
 
 
 
 
-examples :
+collections examples :
 ----------
 
 {
